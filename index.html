@@ -1,0 +1,239 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grêmio MED - ETec BeSt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #1a4d2e; /* Verde escuro */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        nav {
+            background: #1a2e4d; /* Azul anil */
+            padding: 10px;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            color: #ffd700; /* Amarelo */
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: #1a2e4d;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .hero {
+            background: #ecf0f1;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .hero h1 {
+            color: #1a4d2e;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .footer {
+            background: #1a2e4d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .culture-section {
+            background: #f0f8ff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .bathroom-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .mobile-menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/120x120/1a4d2e/FFFFFF?text=Grêmio+MED" alt="Logo Grêmio MED" class="logo">
+        <h1>Movimento Escola Democrática - ETec BeSt</h1>
+    </header>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#cultura">Cultura</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#banheiros">Melhorias Banheiros</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <h1>Juntos pela Democracia e Infraestrutura</h1>
+            <p>Participe, colabore e transforme nossa escola!</p>
+        </section>
+        
+        <section id="sobre" class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/1a4d2e/FFFFFF?text=Quem+Somos" alt="Grupo de alunos em assembleia">
+                <h2>Quem Somos</h2>
+                <p>O Grêmio MED é um coletivo estudantil que promove a participação democrática, debates e projetos para melhorar nossa escola.</p>
+            </div>
+        </section>
+        
+        <section id="cultura" class="culture-section">
+            <h2>Nossa Cultura</h2>
+            <p>Valorizamos a <span class="highlight">diversidade</span> e a <span class="highlight">inovação</span>:</p>
+            <ul>
+                <li>Rodas de conversa sobre patrimônio cultural</li>
+                <li>Sarais literários com autores locais</li>
+                <li>Oficinas de arte sustentável</li>
+            </ul>
+        </section>
+
+        <section id="projetos" class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/1a2e4d/FFFFFF?text=Projetos+Culturais" alt="Alunos em oficina de arte">
+                <h2>Projetos Culturais</h2>
+                <ul>
+                    <li>Revitalização de mural escolar</li>
+                    <li>Feira de troca de livros</li>
+                    <li>Mostra de cinema estudantil</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="banheiros" class="bathroom-section">
+            <h2>Melhorias nos Banheiros</h2>
+            <p>Estamos trabalhando para:</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200/ffd700/000000?text=Reforma+Banheiros" alt="Banheiro reformado">
+                    <h3>Reforma Estrutural</h3>
+                    <ul>
+                        <li>Instalação de novos vasos sanitários</li>
+                        <li>Pisos antiderrapantes</li>
+                        <li>Iluminação LED eficiente</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200/1a4d2e/FFFFFF?text=Higienização" alt="Produtos de limpeza">
+                    <h3>Higienização</h3>
+                    <ul>
+                        <li>Distribuição de álcool em gel</li>
+                        <li>Manutenção diária</li>
+                        <li>Sistema de feedback digital</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Mensagem" rows="5" required></textarea>
+                <button type="submit" style="background: #ffd700; color: #1a2e4d;">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Grêmio MED - ETec BeSt</p>
+        <div>
+            <a href="#"><img src="https://via.placeholder.com/30x30/ffd700/000000?text=FB" alt="Facebook"></a>
+            <a href="#"><img src="https://via.placeholder.com/30x30/1a4d2e/FFFFFF?text=IG" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+```
