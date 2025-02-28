@@ -39,7 +39,38 @@ margin: 0;
             color: #333;
             overflow-x: hidden;
         }
+.foto-redonda {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px; /* Tamanho personalizável */
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #ffd700; /* Borda dourada */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
 
+.foto-redonda:hover {
+    transform: scale(1.05);
+}
+.fotos {
+    border-radius: 10%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #ffd700; /* Borda dourada */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.foto-redonda:hover {
+    transform: scale(1.05);
+}
         header {
             background: var(--verde-principal);
             color: white;
@@ -288,7 +319,7 @@ margin: 0;
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/100x100/2e7d32/FFFFFF?text=MED" alt="Logo Grêmio MED" class="logo">
+        <img src="logoMED.jpg" class="fotos" alt="Logo Grêmio MED" class="logo">
         <h1>Movimento Escola Democrática - ETec BeSt</h1>
     </header>
 
