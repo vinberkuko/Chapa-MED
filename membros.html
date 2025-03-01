@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Equipe - Grêmio MED</title>
+    <style>
+        :root {
+            --verde-principal: #2e7d32;
+            --azul-secundario: #1a237e;
+            --detalhe-ouro: #ffc107;
+        }
+
+        .membro-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .membro-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .foto-membro {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 4px solid var(--detalhe-ouro);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .membro-info {
+            flex: 1;
+        }
+
+        .membro-nome {
+            color: var(--azul-secundario);
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .membro-cargo {
+            color: var(--verde-principal);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .membro-descricao {
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .membro-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .foto-membro {
+                width: 150px;
+                height: 150px;
+            }
+           .caixa-link {
+            width: 300px;
+            padding: 2rem;
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 2rem auto;
+        }
+
+        .caixa-link:hover {
+            background: #1a4d2e;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        }
+                .btn-voltar {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--azul-secundario);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-voltar:hover {
+            background: var(--verde-principal);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header style="background: var(--verde-principal); padding: 2rem; text-align: center;">
+        <h1 style="color: white;">Nossa Equipe</h1>
+    </header>
+
+    <main style="padding: 2rem;">
+        <!-- Membro 1 -->
+        <div class="membro-card" class="caixa-link" onclick="window.location.href='richard.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Richard" alt="Richard" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Richard Carlos</h2>
+                <p class="membro-cargo">Presidente</p>
+                <p class="membro-descricao">
+                    Líder nato e entusiasta da democracia escolar. Richard tem como objetivo principal
+                    promover a união entre os alunos e melhorar a infraestrutura da escola.
+                </p>
+            </div>
+        </div>
+
+        <!-- Membro 2 -->
+       <div class="membro-card" class="caixa-link" onclick="window.location.href='victor.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Ana" alt="Victor Miguel" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Victor Miguel</h2>
+                <p class="membro-cargo">Vice-Presidente</p>
+                <p class="membro-descricao">
+                    Responsável pelos projetos culturais, Victor é apaixonado por arte e educação.
+                    Seu foco é trazer mais eventos culturais para a escola.
+                </p>
+            </div>
+        </div>
+
+        <!-- Membro 3 -->
+        <div class="membro-card" class="caixa-link" onclick="window.location.href='cabral.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Pedro Cabral" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Pedro Cabral</h2>
+                <p class="membro-cargo">Coordenador Administrativo</p>
+                <p class="membro-descricao">
+                    Organizado e dedicado, Pedro...
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='felipe.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Felipão" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Felipe Oliveira</h2>
+                <p class="membro-cargo">Diretor de Esportes</p>
+                <p class="membro-descricao">
+                    O Felipão...
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='enzo.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Enzo" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Enzo</h2>
+                <p class="membro-cargo">Diretor de Relações Acadêmicas</p>
+                <p class="membro-descricao">
+                    Enzo é...
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='rebeca.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Rebeca Felix" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Rebeca Felix</h2>
+                <p class="membro-cargo">Diretora de comunicação</p>
+                <p class="membro-descricao">
+                    A Rebeca cuida da documentação e comunicação interna
+                    da chapa, garantindo que todos os projetos sejam bem documentados.
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='mateus.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Mateus Iuri Rocha" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Mateus Iuri Rocha</h2>
+                <p class="membro-cargo">Diretor de Serviços</p>
+                <p class="membro-descricao">
+                    Dedicado às atividades extra curriculares, concorrente à grêmio em 2024, auxilia a equipe do Richard na busca de uma escola mais democrática. Do curso de agropecuária, tem conhecimento da dificuldade da gerência escolar, e mantem a vontade determinação de formar um grêmio que funcione de verdade.
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='sanches.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Pedro Sanches" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Pedro Sanches</h2>
+                <p class="membro-cargo">Porta Voz Diurno</p>
+                <p class="membro-descricao">
+                    Pedro, ...
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='reis.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Pedro Reis" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">Pedro Reis</h2>
+                <p class="membro-cargo">Porta Voz Noturno</p>
+                <p class="membro-descricao">
+                    Nosso representante da noite, Pedro Reis...
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='joao.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="João Victor" class="foto-membro">
+            <div class="membro-info">
+                <h2 class="membro-nome">João Victor</h2>
+                <p class="membro-cargo">Suplente de Relações Acadêmicas</p>
+                <p class="membro-descricao">
+                    João, ...
+                </p>
+            </div>
+        </div>
+                <div class="membro-card" class="caixa-link" onclick="window.location.href='isabelly.html';">
+            <img src="https://via.placeholder.com/200x200/1a237e/FFFFFF?text=Lucas" alt="Isabelly" class="foto-membro">
+            <div class="membro-info">
+                <h2 richclass="membro-nome">Isabelly</h2>
+                <p class="membro-cargo">Suplente Social</p>
+                <p class="membro-descricao">
+                    Isabelly é...
+                </p>
+            </div>
+        </div>
+                    <a href="index.html" class="btn-voltar">← Voltar para a página inicial.</a>
+    </main>
+
+    <footer style="background: var(--azul-secundario); color: white; text-align: center; padding: 1.5rem;">
+        <p>Grêmio MED - Movimento Escola Democrática</p>
+    </footer>
+</body>
+</html>

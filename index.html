@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grêmio MED - ETec BeSt</title>
+    <style>
+        :root {
+            --verde-principal: #2e7d32;
+            --azul-secundario: #1a237e;
+            --detalhe-ouro: #ffc107;
+            --fundo-claro: #f8f9fa;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: linear-gradient (to bottom #ffffff, gray);
+            color: #333;
+            overflow-x: hidden;
+        }
+.foto-redonda {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px; /* Tamanho personalizável */
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #ffd700; /* Borda dourada */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.foto-redonda:hover {
+    transform: scale(1.05);
+}
+.fotos {
+    border-radius: 10%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #ffd700; /* Borda dourada */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.foto-redonda:hover {
+    transform: scale(1.05);
+}
+        header {
+            background: var(--verde-principal);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            background: var(--azul-secundario);
+    padding: 1.2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: -1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover{
+            color: var(--detalhe-ouro);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 1rem;
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active div:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+  .titulo-dourado {
+        color: var(--detalhe-ouro);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        transition: color 0.3s ease;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .titulo-dourado:hover {
+        color: #ffd700;
+    }
+        .hero {
+            background: linear-gradient(45deg, var(--verde-principal), #388e3c);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: slideIn 1s ease-out;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.4s; }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: var(--azul-secundario);
+            font-weight: 600;
+        }
+
+        .footer {
+            background: var(--azul-secundario);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--detalhe-ouro);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--verde-principal);
+            outline: none;
+        }
+.google-form-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporção 16:9 (ajuste conforme necessário) */
+    overflow: hidden;
+}
+
+.google-form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+        button {
+            background: var(--detalhe-ouro);
+            color: var(--azul-secundario);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--azul-secundario);
+                padding: 1rem 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .card {
+                animation: slideIn 0.6s ease forwards !important;
+                animation-delay: 0s !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczOqyzo1gsQj_vQTBqIf7wx-4hI-HXSgPSLdFUHYRcDHrwvJazCAhEaXchU0F_ZED4zuWJjrPenyk-ZklFK_1xEnmIdReBuiCrnJzYWugebsIL93GOxT8wGKNcR4yjyf35cDUrnVb2MpfI4q28WFq7Xp9A=w720-h704-s-no-gm?authuser=0" class="fotos" alt="Logo Grêmio MED" class="logo">
+        <h1>Movimento Escola Democrática - ETec BeSt</h1>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#cultura">Cultura</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#banheiros">Banheiros</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="membros.html">Nossos Membros!</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1 class="titulo-dourado">Juntos por uma Escola Melhor</h1>
+            <p>Democracia, Participação e Infraestrutura de Qualidade</p>
+        </section>
+
+        <section id="sobre" class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/1a4d2e/FFFFFF?text=Quem+Somos" alt="Grupo de alunos">
+                <h2 class="titulo-dourado">Quem Somos</h2>
+                <p>Coletivo estudantil comprometido com a democracia escolar e melhorias estruturais para todos.</p>
+            </div>
+        </section>
+
+        <section id="cultura" class="card" style="animation-delay: 0.2s">
+            <h2 class="titulo-dourado">Nossa Cultura</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3 class="titulo-dourado">📚 Atividades Culturais</h3>
+                    <ul>
+                        <li>Semana Multicultural</li>
+                        <li>Exposição de Arte e Fotografia</li>
+                        <li>Festival de Cinema</li>
+                        <li>Feira Literária</li>
+                        <li>Concurso de Música e Bandas</li>
+                        <li>Cinema Escolar</li>
+                        <li>Café Filosófico</li>
+                        <p>E mais...</p>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/1a237e/FFFFFF?text=Projetos" alt="Projetos">
+                <h2 class="titulo-dourado">Projetos em Andamento</h2>
+                <ul>
+                    <li>Distribuição de materiais de estudo</li>
+                    <li>Reforma das privadas femininas</li>
+                    <li>Homenagem do dia das mulheres</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="banheiros" class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200/ffc107/000000?text=Reforma" alt="Reforma">
+                <h2 class="titulo-dourado">Economia e Empreendedorismo</h2>
+                <ul>
+                    <li>Concurso de Startups Estudantis</li>
+                    <li>Programa de Incentivo ao Pequeno Negócio</li>
+                    <li>Feira de Trocas e Economia Circular</li>
+                    <p>E mais...</p>
+                </ul>
+            </div>
+        </section>
+        <section id="banheiros" class="cards">
+            <div class="cards"></div>
+           <h2 class="titulo-dourado">Site em desenvolvimento</h2>
+           <p>O site terminará de ser desenvolvido no carnaval.</p>
+        </section>
+
+        <section id="contato" class="card" style="animation-delay: 0.4s">
+    <h2 class="titulo-dourado">Entre em Contato</h2>
+    <div class="google-form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekvogCXLatPPPGA5L9rKFwZMyipKmQCfyOoR954DFi87Y0hg/viewform?embedded=true" width="640" height="1365" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    </div>
+</section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025/1446 Chapa Concorrente ao Grêmio: MED - ETec BeSt Hostiado por GitHub, desenvolvido por VinberKuko sc.ASTL</p>
+            <div class="social-links">
+                
+                <a href="https://www.instagram.com/movimento_best.med?igsh=ZGdlMzR3NHhocjdv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    Instagram
+                </a>
+            </div>
+            <p>✉️correio eletrônico: movimentomedbest@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Animação ao scroll
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

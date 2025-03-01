@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo - Diretor de Relações Acadêmicas</title>
+    <style>
+        :root {
+            --verde-principal: #2e7d32;
+            --azul-secundario: #1a237e;
+            --detalhe-ouro: #ffc107;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+
+        .membro-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .foto-membro {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid var(--detalhe-ouro);
+            margin-bottom: 1.5rem;
+        }
+
+        .membro-nome {
+            color: var(--azul-secundario);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .membro-cargo {
+            color: var(--verde-principal);
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .membro-descricao {
+            text-align: left;
+            color: #444;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--azul-secundario);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-voltar:hover {
+            background: var(--verde-principal);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header style="background: var(--verde-principal); padding: 2rem; text-align: center;">
+        <h1 style="color: white;">Conheça nosso membro</h1>
+    </header>
+
+    <main>
+        <div class="membro-container">
+            <img src="https://via.placeholder.com/250x250/1a237e/FFFFFF?text=Enzo" 
+                 alt="Enzo" 
+                 class="foto-membro">
+            
+            <h2 class="membro-nome">Enzo</h2>
+            <p class="membro-cargo">Diretor de Relações Acadêmicas do Grêmio MED</p>
+            
+            <div class="membro-descricao">
+                <p>
+                    Enzo é o Diretor de Relações Acadêmicas do Grêmio MED, um mediador nato e apaixonado pela educação.
+                    Com 16 anos e cursando o 2º ano do Ensino Médio, ele facilita a comunicação entre alunos, professores
+                    e a direção da escola.
+                </p>
+                <p>
+                    Suas principais responsabilidades incluem:
+                </p>
+                <ul>
+                    <li>Mediar diálogos entre alunos e professores</li>
+                    <li>Promover projetos acadêmicos</li>
+                    <li>Facilitar a resolução de conflitos</li>
+                </ul>
+                <p>
+                    "A educação é a ferramenta mais poderosa para transformar o mundo!"
+                </p>
+            </div>
+
+            <a href="membros.html" class="btn-voltar">← Voltar para a equipe</a>
+        </div>
+    </main>
+
+    <footer style="background: var(--azul-secundario); color: white; text-align: center; padding: 1.5rem;">
+        <p>Grêmio MED - Movimento Escola Democrática</p>
+    </footer>
+</body>
+</html>
